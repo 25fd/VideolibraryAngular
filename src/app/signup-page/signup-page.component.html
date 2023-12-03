@@ -1,0 +1,29 @@
+<!-- signup-page.component.html -->
+<div class="signup-page">
+    <h2 class="signup-heading">Create an Account</h2>
+  
+    <form [formGroup]="signupForm" (ngSubmit)="handleSignup()" class="signup-form">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input formControlName="username" type="text" id="username" name="username" placeholder="Enter your username" />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input formControlName="email" type="email" id="email" name="email" placeholder="Enter your email" />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input formControlName="password" type="password" id="password" name="password" placeholder="Enter your password" (change)="handleConfirmPassword()" />
+      </div>
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input formControlName="confirmPassword" type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" (change)="handleConfirmPassword()" />
+        <p *ngIf="confirmPasswordMsg" class="confirm-password-msg">{{ confirmPasswordMsg }}</p>
+      </div>
+      <button type="submit" class="signup-button" [disabled]="!signupForm.valid">Signup</button>
+    </form>
+    <p class="login-link">
+      Already have an account? <a routerLink="/login">Login here</a>.
+    </p>
+    <app-toast *ngIf="toastService.showToast" [message]="toastService.message" [type]="toastService.type" (close)="toastService.hideToast()"></app-toast>
+  </div>

@@ -1,0 +1,25 @@
+.toast {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    background-color: #444;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+  }
+  
+  .toast-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .toast-close {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.2em;
+    cursor: pointer;
+  }

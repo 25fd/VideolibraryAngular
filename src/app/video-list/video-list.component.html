@@ -1,0 +1,14 @@
+<!-- video-list.component.html -->
+<div>
+    <div class="button-container">
+      <div class="button-row">
+        <button type="submit" class="upload-button" (click)="onUploadClick()">Upload Video</button>
+        <button class="logout-button" (click)="handleLogout()">Logout</button>
+      </div>
+      <!-- <app-search-bar (search)="handleSearch($event)"></app-search-bar> -->
+    </div>
+    <div class="video-list">
+      <app-video-item *ngFor="let video of videoList.ownedFiles; let i = index" [video]="video"></app-video-item>
+      <app-video-item *ngFor="let video of videoList.publicFiles; let i = index" [video]="video"></app-video-item>
+    </div>
+  </div>

@@ -1,0 +1,17 @@
+<!-- file-upload-page.component.html -->
+<div>
+    <button class="back-button" (click)="goBack()">
+      Back
+    </button>
+  </div>
+  <div>
+    <h2>Upload a File</h2>
+    <input type="file" (change)="handleFileChange($event)" />
+    <button (click)="handleUpload()">Upload</button>
+  </div>
+  <app-video-metadata 
+    [(title)]="uploadForm.value.title"
+    [(description)]="uploadForm.value.description"
+    [(isPublic)]="uploadForm.value.isPublic"
+    [(tags)]="tags"
+  ></app-video-metadata>

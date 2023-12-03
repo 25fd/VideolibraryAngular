@@ -1,0 +1,19 @@
+<!-- edit-page.component.html -->
+<div class="edit-page">
+    <button class="back-button" (click)="handleGoBack()">
+      Back
+    </button>
+    <div class="main-content">
+      <video class="main-video" width="100%" controls *ngIf="video">
+        <source [src]="video.url" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <app-video-metadata
+      [(title)]="video.title"
+      [(tags)]="tags"
+      [(description)]="video.description"
+      [(isPublic)]="video.isPublic"
+    ></app-video-metadata>
+    <button type="button" class="btn btn-primary" (click)="handleSubmit()">Submit</button>
+  </div>

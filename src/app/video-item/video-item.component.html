@@ -1,0 +1,20 @@
+<!-- video-item.component.html -->
+<div class="video-item card">
+    <p>{{ video.title }}</p>
+    
+    <video class="video-player" width="100%" controls>
+      <source [src]="video?.url" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="buttons-container">
+      <button class="edit-button" (click)="handleEdit()">
+        Edit
+      </button>
+      <button class="share-button" (click)="handleShare()">
+        Share
+      </button>
+    </div>
+    <p>Description: {{ video.description }}</p>
+    <p>Tags:{{ video.tags.join(', ') }} </p>
+    <app-share-modal *ngIf="showShareModal" (close)="closeShareModal()" [fileId]="video._id"></app-share-modal>
+  </div>

@@ -1,0 +1,20 @@
+<!-- share-modal.component.html -->
+<div class="modal-overlay">
+    <div class="share-modal">
+      <h3 className="modal-heading">Share Video</h3>
+      <label>Email:</label>
+      <input
+        type="email"
+        [(ngModel)]="email"
+        class="modal-input"
+      />
+      <div class="button-container">
+        <button (click)="handleConfirm()" class="modal-button confirm-button">
+          Confirm
+        </button>
+        <button (click)="handleClose()" class="modal-button cancel-button">
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
