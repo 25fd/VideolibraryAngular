@@ -1,4 +1,4 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component, Input, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ToastService } from '../toast.service';
 import { CommonModule } from '@angular/common';
@@ -12,8 +12,8 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./toast.component.css']
 })
 export class ToastComponent implements OnDestroy {
+  @Input() message: string = '';
   showToast: boolean = false;
-  message: string = '';
   type: string = '';
   private subscriptions = new Subscription();
 

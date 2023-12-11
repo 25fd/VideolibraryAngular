@@ -43,7 +43,7 @@ export class ApiService {
   }
 
   register(userData: { email: string; password: string; username: string }): Observable<any> {
-    return this.http.post(`${this.BASE_URL}/user/register`, userData);
+    return this.http.post<{ message: string, error?: string}>(`${this.BASE_URL}/user/register`, userData);
   }
 
   login(userData: { email: string; password: string }): Observable<any> {

@@ -4,11 +4,13 @@ import { AuthService } from '../auth.service'; // Assuming you have an AuthServi
 import { ToastService } from '../toast.service'; // Assuming you have a ToastService
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   standalone: true,
   providers: [AuthService, ToastService],
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, FormsModule, HttpClientModule],
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
   styleUrls: ['./login-page.component.css']

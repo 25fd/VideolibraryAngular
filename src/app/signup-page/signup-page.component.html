@@ -25,5 +25,5 @@
     <p class="login-link">
       Already have an account? <a routerLink="/login">Login here</a>.
     </p>
-    <app-toast *ngIf="toastService.showToast" [message]="toastService.message" [type]="toastService.type" (close)="toastService.hideToast()"></app-toast>
+    <app-toast *ngIf="toastService.showToast" [message]="(toastService.message$ | async) ?? ''" (close)="toastService.hideToast()"></app-toast>
   </div>

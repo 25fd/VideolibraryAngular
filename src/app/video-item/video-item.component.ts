@@ -1,13 +1,14 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { Video } from '../api.service'; // Assuming you have an ApiService with Video model
+import { Video } from '../api.service';
 import { CommonModule } from '@angular/common';
 import { ShareModalComponent } from '../share-modal/share-modal.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-video-item',
   standalone: true,
-  imports: [CommonModule, ShareModalComponent],
+  imports: [CommonModule, ShareModalComponent, HttpClientModule],
   templateUrl: './video-item.component.html',
   styleUrl: './video-item.component.css'
 })

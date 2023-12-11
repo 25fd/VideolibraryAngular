@@ -3,12 +3,14 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { VideoService } from '../video.service'; // Assuming you have a VideoService
 import { Video } from '../api.service'; // Assuming you have an ApiService with Video model
 import { CommonModule } from '@angular/common';
-import { VideoMetadataComponent } from '../video-metadata/video-metadata.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+// import { VideoMetadataComponent } from '../video-metadata/video-metadata.component';
 
 @Component({
   standalone: true,
   providers: [VideoService],
-  imports: [CommonModule, VideoMetadataComponent],
+  imports: [CommonModule, FormsModule,  HttpClientModule],
   selector: 'app-edit-page',
   templateUrl: './edit-page.component.html',
   styleUrls: ['./edit-page.component.css']

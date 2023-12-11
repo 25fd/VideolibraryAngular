@@ -5,11 +5,12 @@ import { AuthService } from '../auth.service'; // Assuming you have an AuthServi
 import { ToastService } from '../toast.service'; // Assuming you have a ToastService
 import { CommonModule } from '@angular/common';
 import { ToastComponent } from '../toast/toast.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   standalone: true,
   providers: [AuthService, ToastService],
-  imports: [ReactiveFormsModule,CommonModule, ToastComponent],
+  imports: [ReactiveFormsModule,CommonModule, ToastComponent, HttpClientModule],
   selector: 'app-signup-page',
   templateUrl: './signup-page.component.html',
   styleUrls: ['./signup-page.component.css']
@@ -20,7 +21,7 @@ export class SignupPageComponent {
 
   constructor(
     private authService: AuthService,
-    private toastService: ToastService,
+    public toastService: ToastService,
     private router: Router,
     private fb: FormBuilder
   ) {

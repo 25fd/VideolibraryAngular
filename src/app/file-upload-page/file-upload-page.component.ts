@@ -4,12 +4,14 @@ import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { ApiService } from '../api.service'; // Assuming you have an ApiService
 import { ToastService } from '../toast.service'; // Assuming you have a ToastService
 import { CommonModule } from '@angular/common';
-import { VideoMetadataComponent } from '../video-metadata/video-metadata.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+// import { VideoMetadataComponent } from '../video-metadata/video-metadata.component';
 
 @Component({
   standalone: true,
   providers: [ ApiService, ToastService],
-  imports: [CommonModule, ReactiveFormsModule, VideoMetadataComponent],
+  imports: [CommonModule, ReactiveFormsModule, FormsModule, HttpClientModule],
   selector: 'app-file-upload-page',
   templateUrl: './file-upload-page.component.html',
   styleUrls: ['./file-upload-page.component.css']
