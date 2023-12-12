@@ -28,8 +28,8 @@ export interface VideoList {
   providedIn: 'root'
 })
 export class ApiService {
-  // private BASE_URL = 'https://video-library-backend-falguns-projects.vercel.app/api';
-  private BASE_URL = 'http://localhost:8080/api';
+  private BASE_URL = 'https://video-library-backend-falguns-projects.vercel.app/api';
+  // private BASE_URL = 'http://localhost:8080/api';
 
   constructor(private http: HttpClient) {}
 
