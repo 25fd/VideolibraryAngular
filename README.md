@@ -71,13 +71,12 @@ To run the project locally, follow these steps:
 
 ## Screenshots
 
-![Application Preview](Screenshot/Screenshot1.png)
-![Application Preview](Screenshot/Screenshot2.png)
-![Application Preview](Screenshot/Screenshot3.png)
-![Application Preview](Screenshot/Screenshot4.png)
-![Application Preview](Screenshot/Screenshot5.png)
-![Application Preview](Screenshot/Screenshot6.png)
-![Application Preview](Screenshot/Screenshot7.png)
+![Application LOGIN](Screenshot/Screenshot1.png)
+![Application HOME](Screenshot/Screenshot2.png)
+![Application SIGNUP](Screenshot/Screenshot3.png)
+![Application UPLOAD](Screenshot/Screenshot4.png)
+![Application SHARE](Screenshot/Screenshot5.png)
+![Application EDIT](Screenshot/Screenshot6.png)
 
 
 
