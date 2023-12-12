@@ -34,8 +34,8 @@ import { ToastService } from './toast.service';
 export class AppComponent {
   title = 'video-library-angular';
   public showToast: boolean = false;
-public toastMessage: string = '';
-  constructor(private toastService: ToastService) {}
+  public toastMessage: string = '';
+  constructor(public toastService: ToastService) {}
   public showToastMessage(message: string): void {
     this.toastMessage = message;
     this.showToast = true;

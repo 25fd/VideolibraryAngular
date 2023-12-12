@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   selector: 'app-toast',
-  template: './toast.component.html',
+  templateUrl: './toast.component.html',
   styleUrls: ['./toast.component.css']
 })
 export class ToastComponent implements OnDestroy {
@@ -17,7 +17,7 @@ export class ToastComponent implements OnDestroy {
 
   private subscriptions = new Subscription();
 
-  constructor(private toastService: ToastService) {
+  constructor(public toastService: ToastService) {
     this.subscriptions.add(this.toastService.showToast$.subscribe(show => this.showToast = show));
     this.subscriptions.add(this.toastService.message$.subscribe(message => this.message = message));
     this.subscriptions.add(this.toastService.type$.subscribe(type => this.type = type));
@@ -29,5 +29,9 @@ export class ToastComponent implements OnDestroy {
 
   ngOnDestroy(): void {
     this.subscriptions.unsubscribe();
+  }
+
+  closeToast(): void {
+    this.toastService.hideToast();
   }
 }

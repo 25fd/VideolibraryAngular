@@ -1,5 +1,4 @@
 <div class="login-page">
-  <app-toast *ngIf="toastService.showToast" [message]="(toastService.message$ | async) ?? ''" (close)="toastService.hideToast()"></app-toast>
     <h2 class="login-heading">Welcome to ByteByte Geeks Video Library</h2>
   
     <form (ngSubmit)="handleLogin()" class="login-form">

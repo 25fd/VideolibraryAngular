@@ -5,7 +5,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class ToastService {
-  private showToastSubject = new BehaviorSubject<boolean>(false);
+  private showToastSubject = new BehaviorSubject<boolean>(true);
   private messageSubject = new BehaviorSubject<string>('');
   private typeSubject = new BehaviorSubject<string>('');
 
@@ -16,14 +16,17 @@ export class ToastService {
   constructor() {}
 
   public showToast(): void {
+    console.log("showToast");
     this.showToastSubject.next(true);
   }
 
   public hideToast(): void {
+    console.log("hideToast");
     this.showToastSubject.next(false);
   }
 
   public setMessage(message: string): void {
+    console.log("setMessage", message);
     this.messageSubject.next(message);
   }
 
