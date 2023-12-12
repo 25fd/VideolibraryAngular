@@ -46,12 +46,14 @@ To run the project locally, follow these steps:
 1. **Clone the Repository:**
    ```bash
    git clone https://github.com/25fd/VideolibraryAngular
+   React application https://25fd.github.io/VideoLibraryReact/home
 
 2. **Install Dependencies**
    npm install
 
 3. **Run the Application**
    npm start
+   ng serve
 
 
 ## Screenshots
