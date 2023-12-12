@@ -33,27 +33,28 @@ Provide a brief overview of your project and its goals.
 
 ### 2. Video Home Page and Upload Page (Falgun Dudhat)
 - **Description:**
-  - Falgun Dudhat took the lead in designing and implementing the video home page, creating an engaging user interface for users to browse and view videos. Additionally, Falgun worked on the upload page, allowing users to contribute their own content to the platform.
+  - Falgun Dudhat took the lead in designing and implementing the video home page, creating an engaging user interface for users to browse and view videos. 
+  - Additionally, Falgun worked on the upload page, allowing users to contribute their own content to the platform.
 
 ### 3. Edit Page and CSS Design (Parth Lukhi)
 - **Description:**
-  - Parth Lukhi's primary focus was on the edit page functionality, allowing users to modify their content as needed. Additionally, Parth was responsible for the overall CSS design of various pages, ensuring a visually appealing and cohesive user experience.
+  - Parth Lukhi's primary focus was on the edit page functionality, allowing users to modify their content as needed. 
+  - Additionally, Parth was responsible for the overall CSS design of various pages, ensuring a visually appealing and cohesive user experience.
 
 ## Getting Started
 
 To run the project locally, follow these steps:
 
 1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/25fd/VideolibraryAngular
-   React application https://25fd.github.io/VideoLibraryReact/home
+   - git clone https://github.com/25fd/VideolibraryAngular
+   - React application https://25fd.github.io/VideoLibraryReact/home
 
 2. **Install Dependencies**
-   npm install
+   - npm install
 
 3. **Run the Application**
-   npm start
-   ng serve
+   - npm start
+   - ng serve
 
 
 ## Screenshots
