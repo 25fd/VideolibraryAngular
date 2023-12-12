@@ -1,27 +1,68 @@
-# VideoLibraryAngular
+# VideoLibrary
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
+# Project Name
 
-## Development server
+Brief description of your project.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Team Members
 
-## Code scaffolding
+1. **Jay Savani**
+   - **Contributions:**
+     - Login functionality
+     - Signup functionality
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2. **Falgun Dudhat**
+   - **Contributions:**
+     - Video home page design and implementation
+     - Upload page design and implementation
 
-## Build
+3. **Parth Lukhi**
+   - **Contributions:**
+     - Edit page functionality
+     - CSS design for various pages
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Overview
 
-## Running unit tests
+Provide a brief overview of your project and its goals.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Modules and Contributions
 
-## Running end-to-end tests
+### 1. Login and Signup (Jay Savani)
+- **Description:**
+  - Jay Savani focused on implementing the login and signup functionality, ensuring a secure and seamless user authentication process.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### 2. Video Home Page and Upload Page (Falgun Dudhat)
+- **Description:**
+  - Falgun Dudhat took the lead in designing and implementing the video home page, creating an engaging user interface for users to browse and view videos. Additionally, Falgun worked on the upload page, allowing users to contribute their own content to the platform.
 
-## Further help
+### 3. Edit Page and CSS Design (Parth Lukhi)
+- **Description:**
+  - Parth Lukhi's primary focus was on the edit page functionality, allowing users to modify their content as needed. Additionally, Parth was responsible for the overall CSS design of various pages, ensuring a visually appealing and cohesive user experience.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Getting Started
+
+To run the project locally, follow these steps:
+
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/25fd/VideolibraryAngular
+
+2. **Install Dependencies**
+   npm install
+
+3. **Run the Application**
+   npm start
+
+
+## Screenshots
+
+![Application Preview](Screenshot/Screenshot1.png)
+![Application Preview](Screenshot/Screenshot2.png)
+![Application Preview](Screenshot/Screenshot3.png)
+![Application Preview](Screenshot/Screenshot4.png)
+![Application Preview](Screenshot/Screenshot5.png)
+![Application Preview](Screenshot/Screenshot6.png)
+![Application Preview](Screenshot/Screenshot7.png)
+
+
+
