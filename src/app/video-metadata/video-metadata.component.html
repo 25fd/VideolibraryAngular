@@ -42,4 +42,14 @@
           />
         </label>
       </div>
+      <div class="sidebar-item">
+        <label for="thumbnail">Thumbnail</label>
+        <input
+          type="file"
+          id="thumbnail"
+          name="thumbnail"
+          (change)="handleFileChange($event)"
+        />
+        <button (click)="handleUpload()">Upload Thumbnail</button>
+      </div>
     </div>

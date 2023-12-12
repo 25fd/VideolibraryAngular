@@ -11,7 +11,7 @@ export interface Video {
   name: string;
   title: string;
   description: string;
-  tags: string[];
+  tags: string;
   url: string;
   thumbnailUrl: string;
   isPublic: boolean;

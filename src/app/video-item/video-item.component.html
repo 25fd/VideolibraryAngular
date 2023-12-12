@@ -2,10 +2,13 @@
 <div class="video-item card">
     <p>{{ video.title }}</p>
     
-    <video class="video-player" width="100%" controls>
-      <source [src]="video?.url" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
+    <img *ngIf="video?.thumbnailUrl; else videoPlayer" [src]="video?.thumbnailUrl" alt="Video thumbnail" class="video-thumbnail">
+    <ng-template #videoPlayer>
+      <video class="video-player" width="100%" controls>
+        <source [src]="video?.url" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </ng-template>
     <div class="buttons-container">
       <button class="edit-button" (click)="handleEdit()">
         Edit
@@ -15,6 +18,6 @@
       </button>
     </div>
     <p>Description: {{ video.description }}</p>
-    <p>Tags:{{ video.tags.join(', ') }} </p>
+    <p>Tags:{{ video.tags }} </p>
     <app-share-modal *ngIf="showShareModal" (onClose)="closeShareModal()" [fileId]="video._id"></app-share-modal>
   </div>

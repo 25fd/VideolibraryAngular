@@ -8,7 +8,28 @@
       <!-- <app-search-bar (search)="handleSearch($event)"></app-search-bar> -->
     </div>
     <div class="video-list">
-      <app-video-item *ngFor="let video of videoList.ownedFiles; let i = index" [video]="video"></app-video-item>
-      <app-video-item *ngFor="let video of videoList.publicFiles; let i = index" [video]="video"></app-video-item>
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" id="owned-tab" data-toggle="tab" href="#owned">Owned</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="public-tab" data-toggle="tab" href="#public">Public</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="shared-tab" data-toggle="tab" href="#shared">Shared</a>
+        </li>
+      </ul>
+      
+      <div class="tab-content">
+        <div class="tab-pane fade show active" id="owned">
+          <app-video-item *ngFor="let video of videoList.ownedFiles; let i = index" [video]="video"></app-video-item>        </div>
+        <div class="tab-pane fade" id="public">
+          <app-video-item *ngFor="let video of videoList.publicFiles; let i = index" [video]="video"></app-video-item>
+        </div>
+        <div class="tab-pane fade" id="shared">
+          <app-video-item *ngFor="let video of videoList.sharedFiles; let i = index" [video]="video"></app-video-item>
+        </div>
+      </div>
+      
     </div>
   </div>

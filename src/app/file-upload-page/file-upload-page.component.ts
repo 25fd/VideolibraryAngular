@@ -18,7 +18,7 @@ import { VideoMetadataComponent } from '../video-metadata/video-metadata.compone
 })
 export class FileUploadPageComponent {
   uploadForm: FormGroup;
-  tags: string[] = [];
+  tags: string = '';
 
   constructor(
     private apiService: ApiService,
@@ -31,7 +31,7 @@ export class FileUploadPageComponent {
       title: [''],
       description: [''],
       isPublic: [false],
-      tags: ['']
+      tags: ''
     });
   }
 
@@ -58,7 +58,7 @@ export class FileUploadPageComponent {
     formData.append('title', this.uploadForm.value.title);
     formData.append('description', this.uploadForm.value.description);
     formData.append('isPublic', String(this.uploadForm.value.isPublic));
-    formData.append('tags', this.tags.join(','));
+    formData.append('tags', this.tags);
 
     try {
       await this.apiService.uploadFile(formData).toPromise();

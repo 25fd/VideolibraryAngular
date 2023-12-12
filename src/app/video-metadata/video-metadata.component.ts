@@ -14,8 +14,8 @@ export class VideoMetadataComponent {
   constructor(private videoService: VideoService, private toastService: ToastService) {}
   @Input() title!: string;
   @Output() titleChange = new EventEmitter<string>();
-  @Input() tags!: string[];
-  @Output() tagsChange = new EventEmitter<string[]>();
+  @Input() tags!: string;
+  @Output() tagsChange = new EventEmitter<string>();
   @Input() description!: string;
   @Output() descriptionChange = new EventEmitter<string>();
   @Input() isPublic!: boolean;
@@ -23,12 +23,14 @@ export class VideoMetadataComponent {
   selectedFile?: File;
   fileId?: string;
 
+  
+
   handleTitleChange(value: string): void {
     this.titleChange.emit(value);
   }
 
   handleTagsChange(value: string): void {
-    this.tagsChange.emit(value.split(',').map(tag => tag.trim()));
+    this.tagsChange.emit(value);
   }
 
   handleDescriptionChange(event: Event): void {

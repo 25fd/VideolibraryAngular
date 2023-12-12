@@ -17,7 +17,7 @@ import { VideoMetadataComponent } from '../video-metadata/video-metadata.compone
 })
 export class EditPageComponent implements OnInit {
   video!: Video;
-  tags: string[] = [];
+  tags: string = '';
 
   constructor(
     private videoService: VideoService,
@@ -45,6 +45,9 @@ export class EditPageComponent implements OnInit {
       isPublic: this.video.isPublic,
       tags: this.tags,
     };
+    this.videoService.editVideo(this.video._id, metadata).then(() => {
+      this.router.navigate(['/home']);
+    });
   }
 
   handleGoBack(): void {

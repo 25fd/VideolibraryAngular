@@ -26,6 +26,10 @@ export class VideoService {
 
 
   getVideoById(id: string): Observable<Video | undefined> {
+    //get videos if not already fetched
+    if (!this.videosSubject.value.ownedFiles) {
+      this.getVideos();
+    }
     return this.videos$.pipe(
       map((videoList: VideoList) => {
         console.log(videoList);
@@ -36,5 +40,9 @@ export class VideoService {
 
   uploadThumbnail(fileId: string, thumbnail: FormData): Promise<{message: string} | { error: string}> {
     return this.apiService.uploadThumbnail(fileId, thumbnail).toPromise();
+  }
+
+  editVideo(fileId: string, metadata: { title: string, description: string, isPublic: boolean, tags: string }): Promise<{message: string} | { error: string}> {
+    return this.apiService.updateFileApi(fileId, metadata).toPromise();
   }
 }
