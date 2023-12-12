@@ -5,12 +5,12 @@ import { Video } from '../api.service'; // Assuming you have an ApiService with 
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-// import { VideoMetadataComponent } from '../video-metadata/video-metadata.component';
+import { VideoMetadataComponent } from '../video-metadata/video-metadata.component';
 
 @Component({
   standalone: true,
   providers: [VideoService],
-  imports: [CommonModule, FormsModule,  HttpClientModule],
+  imports: [CommonModule, FormsModule,  HttpClientModule, VideoMetadataComponent],
   selector: 'app-edit-page',
   templateUrl: './edit-page.component.html',
   styleUrls: ['./edit-page.component.css']
@@ -29,6 +29,7 @@ export class EditPageComponent implements OnInit {
     const fileId = this.route.snapshot.queryParamMap.get('file');
     if (fileId) {
       this.videoService.getVideoById(fileId).subscribe((video: Video | undefined) => {
+        console.log(video);
         if (video) {
           this.video = video;
           this.tags = video.tags;
@@ -44,8 +45,6 @@ export class EditPageComponent implements OnInit {
       isPublic: this.video.isPublic,
       tags: this.tags,
     };
-    // Call the VideoService to update the video metadata
-    // Handle the response and errors
   }
 
   handleGoBack(): void {

@@ -28,6 +28,7 @@ export interface VideoList {
   providedIn: 'root'
 })
 export class ApiService {
+  // private BASE_URL = 'https://video-library-backend-falguns-projects.vercel.app/api';
   private BASE_URL = 'http://localhost:8080/api';
 
   constructor(private http: HttpClient) {}
@@ -74,5 +75,10 @@ export class ApiService {
   updateFileApi(fileId: string, fileData: object): Observable<any> {
     const headers = this.getAuthHeaders();
     return this.http.put(`${this.BASE_URL}/file/update/${fileId}`, fileData, { headers });
+  }
+
+  uploadThumbnail(fileId: string, thumbnail: FormData): Observable<any> {
+    const headers = this.getAuthHeaders().delete('Content-Type');
+    return this.http.post(`${this.BASE_URL}/file/upload-thumbnail/${fileId}`, thumbnail, { headers });
   }
 }

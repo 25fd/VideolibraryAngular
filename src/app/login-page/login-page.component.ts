@@ -6,11 +6,12 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ToastComponent } from '../toast/toast.component';
 
 @Component({
   standalone: true,
   providers: [AuthService, ToastService],
-  imports: [CommonModule, ReactiveFormsModule, FormsModule, HttpClientModule],
+  imports: [CommonModule, ReactiveFormsModule, FormsModule, HttpClientModule, ToastComponent],
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
   styleUrls: ['./login-page.component.css']
@@ -21,7 +22,7 @@ export class LoginPageComponent {
 
   constructor(
     private authService: AuthService,
-    private toastService: ToastService,
+    public toastService: ToastService,
     private router: Router
   ) {}
 
@@ -35,6 +36,7 @@ export class LoginPageComponent {
       } else {
         this.toastService.setMessage('Login successful');
         this.toastService.setType('success');
+        console.log("Login successful neviagating to home");
         this.router.navigate(['/home']);
       }
       this.toastService.showToast();

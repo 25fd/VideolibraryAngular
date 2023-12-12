@@ -5,7 +5,6 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   standalone: true,
-  providers: [ToastService],
   imports: [CommonModule],
   selector: 'app-toast',
   template: './toast.component.html',
@@ -13,8 +12,9 @@ import { CommonModule } from '@angular/common';
 })
 export class ToastComponent implements OnDestroy {
   @Input() message: string = '';
-  showToast: boolean = false;
+  @Input() showToast: boolean = true;
   type: string = '';
+
   private subscriptions = new Subscription();
 
   constructor(private toastService: ToastService) {

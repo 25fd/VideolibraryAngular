@@ -4,6 +4,7 @@ import { VideoService } from '../video.service';
 import { VideoList } from '../api.service';
 import { CommonModule } from '@angular/common';
 import { VideoItemComponent } from '../video-item/video-item.component';
+import { AuthService } from '../auth.service';
 
 @Component({
   standalone: true,
@@ -16,7 +17,7 @@ import { VideoItemComponent } from '../video-item/video-item.component';
 export class VideoListComponent implements OnInit {
   videoList: VideoList = {};
 
-  constructor(private videoService: VideoService, private router: Router) {}
+  constructor(private videoService: VideoService, private router: Router, private authService: AuthService) {}
 
   ngOnInit(): void {
     this.videoService.getVideos();
@@ -26,11 +27,10 @@ export class VideoListComponent implements OnInit {
   }
 
   handleSearch(query: string): void {
-    // Implement search functionality if needed
   }
 
   handleLogout(): void {
-    // Implement logout functionality using AuthService
+    this.authService.logout();
     this.router.navigate(['/login']);
   }
 

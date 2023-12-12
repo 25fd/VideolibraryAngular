@@ -1,4 +1,5 @@
 <div class="login-page">
+  <app-toast *ngIf="toastService.showToast" [message]="(toastService.message$ | async) ?? ''" (close)="toastService.hideToast()"></app-toast>
     <h2 class="login-heading">Welcome to ByteByte Geeks Video Library</h2>
   
     <form (ngSubmit)="handleLogin()" class="login-form">
@@ -13,6 +14,6 @@
       <button type="submit" class="login-button">Login</button>
     </form>
     <p class="signup-link">
-      Don't have an account? <a routerLink="/signup">Sign up here</a>.
+      Don't have an account? <a href="/signup">Sign up here</a>.
     </p>
   </div>

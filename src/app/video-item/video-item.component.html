@@ -16,5 +16,5 @@
     </div>
     <p>Description: {{ video.description }}</p>
     <p>Tags:{{ video.tags.join(', ') }} </p>
-    <app-share-modal *ngIf="showShareModal" (close)="closeShareModal()" [fileId]="video._id"></app-share-modal>
+    <app-share-modal *ngIf="showShareModal" (onClose)="closeShareModal()" [fileId]="video._id"></app-share-modal>
   </div>

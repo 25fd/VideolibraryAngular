@@ -28,8 +28,13 @@ export class VideoService {
   getVideoById(id: string): Observable<Video | undefined> {
     return this.videos$.pipe(
       map((videoList: VideoList) => {
+        console.log(videoList);
         return videoList.ownedFiles?.find((video: Video) => video._id === id);
       })
     );
+  }
+
+  uploadThumbnail(fileId: string, thumbnail: FormData): Promise<{message: string} | { error: string}> {
+    return this.apiService.uploadThumbnail(fileId, thumbnail).toPromise();
   }
 }

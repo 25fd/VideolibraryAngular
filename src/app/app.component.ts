@@ -8,6 +8,8 @@ import { FileUploadPageComponent } from './file-upload-page/file-upload-page.com
 import { VideoListComponent } from './video-list/video-list.component';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { ToastComponent } from './toast/toast.component';
+import { ToastService } from './toast.service';
 
 
 @Component({
@@ -23,11 +25,29 @@ import { HttpClientModule } from '@angular/common/http';
     VideoListComponent,
     RouterLink,
     RouterLinkActive,
-    HttpClientModule
+    HttpClientModule,
+    ToastComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   title = 'video-library-angular';
+  public showToast: boolean = false;
+public toastMessage: string = '';
+  constructor(private toastService: ToastService) {}
+  public showToastMessage(message: string): void {
+    this.toastMessage = message;
+    this.showToast = true;
+  
+    setTimeout(() => {
+      this.showToast = false;
+    }, 3000);
+  }
+  ngOnInit(): void {
+    this.toastService.showToast$.subscribe(show => this.showToast = show);
+    this.toastService.message$.subscribe(message => this.toastMessage = message);
+    console.log(this.toastMessage);
+    console.log(this.showToast);
+  }
 }

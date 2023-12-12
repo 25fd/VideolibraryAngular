@@ -1,0 +1,45 @@
+<!-- video-metadata.component.html -->
+<div class="right-sidebar">
+    <div class="sidebar-item">
+      <label for="videoTitle">Video Title</label>
+      <input
+        type="text"
+        id="videoTitle"
+        name="videoTitle"
+        placeholder="Enter video title"
+        [(ngModel)]="title"
+        (ngModelChange)="titleChange.emit($event)"
+      />
+    </div>
+    <div class="sidebar-item">
+      <label for="tags">Tags</label>
+      <input
+        type="text"
+        id="tags"
+        name="tags"
+        placeholder="Enter tags, separated by commas"
+        [(ngModel)]="tags"
+        (ngModelChange)="tagsChange.emit($event)"
+      />
+    </div>
+    <div class="sidebar-item">
+      <label for="description">Description</label>
+      <textarea
+        id="description"
+        name="description"
+        placeholder="Enter video description"
+        [(ngModel)]="description"
+        (ngModelChange)="descriptionChange.emit($event)"
+      ></textarea>
+    </div>
+    <div class="sidebar-item checkbox-item">
+        <label>
+          To mark video private uncheck the box
+          <input
+            type="checkbox"
+            [checked]="isPublic"
+            (change)="handleIsPublicChange($event)"
+          />
+        </label>
+      </div>
+    </div>

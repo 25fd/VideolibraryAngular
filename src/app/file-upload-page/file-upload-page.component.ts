@@ -6,12 +6,12 @@ import { ToastService } from '../toast.service'; // Assuming you have a ToastSer
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-// import { VideoMetadataComponent } from '../video-metadata/video-metadata.component';
+import { VideoMetadataComponent } from '../video-metadata/video-metadata.component';
 
 @Component({
   standalone: true,
   providers: [ ApiService, ToastService],
-  imports: [CommonModule, ReactiveFormsModule, FormsModule, HttpClientModule],
+  imports: [CommonModule, ReactiveFormsModule, FormsModule, HttpClientModule, VideoMetadataComponent],
   selector: 'app-file-upload-page',
   templateUrl: './file-upload-page.component.html',
   styleUrls: ['./file-upload-page.component.css']

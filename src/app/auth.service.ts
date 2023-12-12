@@ -39,7 +39,7 @@ export class AuthService {
 
   logout(): void {
     this.userSubject.next(null);
-    localStorage.removeItem('user');
+    localStorage.clear();
   }
 
   async register(username: string, email: string, password: string): Promise<{ message: string, error?: string }> {

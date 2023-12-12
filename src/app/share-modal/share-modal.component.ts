@@ -24,6 +24,7 @@ export class ShareModalComponent {
   }
 
   handleClose(): void {
+    console.log('handleClose');
     this.onClose.emit();
   }
 }
