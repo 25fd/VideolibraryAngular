@@ -1,6 +1,91 @@
-.video-list {
+/* .video-list {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: column;
     justify-content: space-around;
     margin-top: 20px;
   }
+   */
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.button-row {
+  display: flex;
+}
+
+.upload-button,
+.logout-button {
+  background-color: #2b669a;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.upload-button:hover,
+.logout-button:hover {
+  background-color: #d78b51;
+}
+
+.video-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.nav-tabs {
+  margin-bottom: 15px;
+}
+
+.nav-item {
+  margin-right: 10px;
+}
+
+.nav-link {
+  background-color: #917d6d;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.nav-link.active {
+  background-color: #d78b51;
+}
+
+.tab-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.tab-pane {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Adjust the styling of video items as needed */
+.app-video-item {
+  flex: 0.2 0.1 calc(10% - 2px); 
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.app-video-item:hover {
+  transform: scale(1.05);
+}

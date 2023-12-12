@@ -1,6 +1,6 @@
 body {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    flex-direction: row;
     min-height: 100vh;
   }
   
