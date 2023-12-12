@@ -1,0 +1,46 @@
+.edit-page {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    /* flex-direction: column;
+    align-items: center; */
+  }
+  
+  .back-button, .btn-primary {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .back-button:hover{
+    background-color: #ae4627;}
+
+  .btn-primary:hover {
+    background-color: #27ae60;
+  }
+  
+  .main-content {
+    margin-top: 20px;   
+    width: 100%;
+  }
+  
+  .main-video {
+    width: fit-content;
+    height: fit-content;
+    /* object-fit: cover; Ensures the video maintains its aspect ratio */
+  }
+  
+  .app-video-metadata {
+    margin-top: 30px;
+    width: 100%;
+  }
+  
+  .btn-primary {
+    align-self: flex-start;
+  }
+  
