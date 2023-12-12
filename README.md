@@ -1,8 +1,24 @@
-# VideoLibrary
+## Video Library System
 
-# Project Name
+The project scope is aimed to develop a user friendly web application that allows users to upload videos, edit metadata, assign tags, manage privacy, set thumbnails and to view the video.
 
-Brief description of your project.
+## Overview
+1. **Features**
+- Upload a video with Title and Description.
+- Assign tags to the videos.
+- Set video Thumbnail.
+- Video Privacy management.
+- Video share.
+- Edit Metadata
+
+2. **Functional Requirements**
+- Users can upload videos with Title description and tags along with providing access to other users to view.
+- Users can upload and set video thumbnails.
+- Users can also edit metadata for all the videos owned by the same users.
+
+3. **Non-Functional Requirements**
+- User friendly.
+- Efficient and easy to use.
 
 ## Team Members
 
@@ -20,10 +36,6 @@ Brief description of your project.
    - **Contributions:**
      - Edit page functionality
      - CSS design for various pages
-
-## Overview
-
-Provide a brief overview of your project and its goals.
 
 ## Modules and Contributions
 
